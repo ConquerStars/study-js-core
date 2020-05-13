@@ -4,7 +4,9 @@
 // npm i anywhere -g 
 // 在跟目录下输入命令 anywhere （部分情况下需要运行管理员权限的cmd）
 
-// 本质上 export 也就只能导出这六种声明语法所声明的标识符，并且在导出时将它们统一称为“名字”
-import {default as as} from './ExportDefault.mjs';
+// 本质上 export 也就只能导出这六种 *声明语法所声明* 的标识符，并且在导出时将它们统一称为“名字”
+import smg from './ExportDefault.mjs';
+console.log(smg.name)
+smg();
+smg = 1; // throw error: Assignment to constant variable.
 
-as();
