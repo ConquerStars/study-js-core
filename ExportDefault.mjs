@@ -12,4 +12,10 @@
 
 export default function() { console.log('function') }
 
+// Ⅰ 在处理 export/import 语句的全程，没有表达式被执行！
+// Ⅱ 所谓模块的装配过程，就是执行一次顶层代码而已。
+// Ⅲ 它并不是导出了一个匿名函数表达式，而是导出了一个匿名函数定义（Anonymous Function Definition）。
 
+
+// 通过 *import* 形成依赖树
+// 在import端引入后是以const声明规则 而在export端则根据变量声明的规则
